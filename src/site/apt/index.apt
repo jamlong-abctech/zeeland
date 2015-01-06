@@ -1,0 +1,41 @@
+                --------
+                Zeeland
+                --------
+
+Welcome to Zeeland
+
+ Zeeland is the project for administrate data in Zett via SOAP web service. it compounds from these sub module.
+
+[images/zeeland_overview.png]
+
+ [[1]] <<Zeeland Client>> the module for create web service client for communicate with Zservices which is the project for
+  manipulate the data inside Zett. this module will be using by Zeeland WebApp module.
+
+ [[2]] <<Zeeland WebApp>> the main application of Zeeland project. it is the web application module that provide the interface
+ for edit and update in data in Zett by use the web service client that create from Zeeland Client module.
+
+How to get Zeeland
+
+ we can clone Zeeland from git repository, by use this command.
+
++---
+git clone apdm.int.abctech-thailand.com:/opt/git/code/zeeland.git
++---
+
+about the Hydra setting
+
+ [[1]] Open zeeland/zeeland-webapp/pom.xml and change property use.hydra from "false" to "true".
+
++---
+<systemProperty>
+   <name>use.hydra</name>
+   <value>true</value>
+</systemProperty>
++---
+
+ [[2]] Run hydra and zeeland respectively.
+
+ [[3]] Login to hydra, use same username and password.
+
+
+

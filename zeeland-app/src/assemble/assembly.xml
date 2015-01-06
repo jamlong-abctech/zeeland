@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assembly>
+    <!--
+        Create with:
+         mvn clean compile package assembly:assembly
+        -->
+    <id>app</id>
+    <formats>
+        <format>zip</format>
+    </formats>
+    <includeBaseDirectory>false</includeBaseDirectory>
+    <fileSets>
+        <fileSet>
+            <directory>target/classes</directory>
+            <outputDirectory>/</outputDirectory>
+        </fileSet>
+    </fileSets>
+    <dependencySets>
+        <dependencySet>
+            <fileMode>0664</fileMode>
+            <directoryMode>0664</directoryMode>
+            <outputDirectory>/lib</outputDirectory>
+            <unpack>false</unpack>
+            <scope>runtime</scope>
+        </dependencySet>
+    </dependencySets>
+</assembly>

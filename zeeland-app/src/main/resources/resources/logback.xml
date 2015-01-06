@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- For assistance related to logback-translator or configuration  -->
+<!-- files in general, please contact the logback user mailing list -->
+<!-- at http://www.qos.ch/mailman/listinfo/logback-user             -->
+<!--                                                                -->
+<!-- For professional support please see                            -->
+<!--    http://www.qos.ch/shop/products/professionalSupport         -->
+<!--                                                                -->
+<configuration scan="true" scanPeriod="60 seconds">
+  <appender name="regularfile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <!--See also http://logback.qos.ch/manual/appenders.html#RollingFileAppender-->
+    <File>/var/log/app/zeeland/zeeland.log</File>
+    <encoder>
+      <pattern>%d [%-5p][%10.10t] [%c][%M][%L] - %m%n</pattern>
+    </encoder>
+    <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+      <maxIndex>10</maxIndex>
+      <FileNamePattern>/var/log/app/zeeland/zeeland.log.%i</FileNamePattern>
+    </rollingPolicy>
+    <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+      <MaxFileSize>10000KB</MaxFileSize>
+    </triggeringPolicy>
+  </appender>
+  <logger name="org.springframework" level="INFO"/>
+  <logger name="no.api" level="INFO"/>
+  <logger name="net" level="INFO"/>
+    <logger name="httpclient.wire" level="INFO"/>
+  <logger name="org" level="INFO"/>
+  <logger name="com.abctech" level="INFO"/>
+  <logger name="org.apache" level="INFO"/>
+  <logger name="com" level="INFO"/>
+    <logger name="org.hibernate" level="INFO"/>
+  <logger name="net.jawr" level="INFO"/>
+  <!-- Want to see if quartz trigger updated at jetty start-up time -->
+  <logger name="org.apache.camel.component.quartz.QuartzComponent" level="DEBUG"/>
+  <root level="INFO">
+    <appender-ref ref="regularfile"/>
+  </root>
+</configuration>

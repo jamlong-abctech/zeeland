@@ -1,0 +1,147 @@
+                --------
+                zeeland-webapp
+                --------
+
+What is the Zeeland WebApp
+
+ Zeeland WebApp is web application for administrate the data in zett via SOAP Web Service chanel.by using Zservices.
+
+How the Zeeland WebApp can connect with ZServices.
+
+ Zeeland WebApp can connect with the data in Zett by using the web service interface class that has been generate in the Zeeland Client module.
+ We use it for create web service endpoint inside the Zeeland WebApp Spring Application Context like this.
+
++---
+ <jaxws:client id="AdService"
+       serviceClass="no.zett.service.facade.AdService"
+       address="http://localhost:9038/zservices/AdService?wsdl" />
++---
+
+ this is the example for create the web service client for AdService in Zservices. input the serviceClass point to the
+ service interface that has been generated in the Zeeland Client module. and provides the web service url in address.
+
+ in the component that would like to use the service, just autowired it inside the class
+
+Zeeland WebApp can not find the class in Zeeland Client
+
+ sometimes when you develop the Zeeland WebApp and found that problem. Cause of that it come from the InteliJ  can not
+ found the class that we generate in Zeeland Client. we can slove it by edit the <<zeeland-client.iml>> inside the Zeeland Clinet
+ module in this section.
+
++---
+<content url="file://$MODULE_DIR$">
+...
+</content>
++---
+
+ to this.
+
++---
+<content url="file://$MODULE_DIR$">
+   <sourceFolder url="file://$MODULE_DIR$/target/java" isTestSource="false" />
+   <excludeFolder url="file://$MODULE_DIR$/target/classes" />
+   <excludeFolder url="file://$MODULE_DIR$/target/generated-classes" />
+   <excludeFolder url="file://$MODULE_DIR$/target/maven-archiver" />
+   <excludeFolder url="file://$MODULE_DIR$/target/test-classes" />
+ </content>
++---
+
+ and then <<save>>. InteliJ will update and found the class from the Zeeland Client
+
+How to setup mapfetcher standalone application.
+
+*Setup on your local.
+
+    [[1]] mapfetcher is part of zett. Make sure you have zett already by.
+
++---
+cd $HOME/git/code
+git clone apdm.int.abctech-thailand.com:/opt/git/code/zett.git
++---
+
+    [[2]] Go to zett-mapfetcher directory then build project by.
+
++---
+cd zett/zett-mapfetcher
+mvn assembly:assembly
+unzip -d "your directory name" target/assembly/zett-mapfetcher-run.zip
++---
+
+    [[3]] Go to your directory that you have unzipped zett-mapfetcher.zip in then config program by.
+
++---
+cd $HOME/"your mapfetcher directory"
+vi mapfetcher.sh
+add this command next to   # set classpath line.
+export MAPFETCHER_HOME=$HOME/"your mapfetcher directory"
++---
+
+    [[4]] Start or Stop mapfetcher by.
+
++---
+./mapfetcher.sh {start|stop}
++---
+
+
+*Setup on asoke
+
+    [[1]] mapfetcher is part of zett. Make sure you have zett already by.
+
++---
+cd $HOME/git/code
+git clone apdm.int.abctech-thailand.com:/opt/git/code/zett.git
++---
+
+    [[2]] Go to zett-mapfetcher directory then build project by.
+
++---
+cd zett/zett-mapfetcher
+mvn assembly:assembly
++---
+
+    [[3]] Go to your target/assembly directory then copy zip file to asoke.
+
++---
+cd target/assembly
+scp zett-mapfetcher-run.zip USERNAME@asoke:/home/USERNAME
++---
+
+    [[4]] ssh to asoke.
+
++---
+ssh-add
+ssh -A asoke
++---
+
+    [[5]] Create mapfetcher directory in /user/local.
+
++---
+cd /user/local
+sudo mkdir mapfetcher
++---
+
+    [[6]] Move zett-mapfetcher-run.zip to /usr/local/mapfetcher and unzip.
+
++---
+sudo mv /home/USERNAME/zett-mapfetcher-run.zip /usr/local/mapfetcher
+sudo unzip /usr/local/mapfetcher/zett-mapfetcher-run.zip
+cd /usr/local/mapfetcher
++---
+
+    [[7]] Add configuration file path in /usr/local/mapfetcher/java_opts. This will make mapfetcher use database from nana.
+       Database configuration is in /etc/api/zett/datasource.properties. Then export MAPFETCHER_HOME to mapfetcher.sh file.
+
++---
+java_opt
+-Dzett.config.dir=/etc/api/zett
++---
++---
+mapfetcher.sh
+export MAPFETCHER_HOME=$HOME/"your mapfetcher directory"
++---
+
+    [[8]] Start or Stop mapfetcher by.
+
++---
+./mapfetcher.sh {start|stop}
++---

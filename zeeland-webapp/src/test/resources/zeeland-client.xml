@@ -1,0 +1,63 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:jaxws="http://cxf.apache.org/jaxws"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+
+   <!--   <jaxws:client id="AdService"
+   serviceClass="no.zett.service.facade.AdService"
+   address="http://asoke.dev.abctech-thailand.com/zservices/AdService?wsdl" />
+<jaxws:client id="UserService"
+   serviceClass="no.zett.service.facade.UserService"
+   address="http://asoke.dev.abctech-thailand.com/zservices/UserService?wsdl" />
+<jaxws:client id="CompanyService"
+   serviceClass="no.zett.service.facade.CompanyService"
+   address="http://asoke.dev.abctech-thailand.com/zservices/CompanyService?wsdl" />
+<jaxws:client id="CategoryService"
+   serviceClass="no.zett.service.facade.CategoryService"
+   address="http://asoke.dev.abctech-thailand.com/zservices/CategoryService?wsdl" />
+<jaxws:client id="SearchItemService"
+   serviceClass="no.zett.service.facade.SearchItemService"
+   address="http://asoke.dev.abctech-thailand.com/zservices/SearchItemService?wsdl" />
+<jaxws:client id="FraudLogService"
+   serviceClass="no.zett.service.facade.FraudLogService"
+   address="http://asoke.dev.abctech-thailand.com/zservices/FraudLogService?wsdl" />-->
+
+    <jaxws:client id="AdService"
+                  serviceClass="no.zett.service.facade.AdService"
+                  address="http://localhost:9038/zservices/AdService?wsdl" />
+
+    <jaxws:client id="UserService"
+                  serviceClass="no.zett.service.facade.UserService"
+                  address="http://localhost:9038/zservices/UserService?wsdl" />
+
+    <jaxws:client id="CompanyService"
+                  serviceClass="no.zett.service.facade.CompanyService"
+                  address="http://localhost:9038/zservices/CompanyService?wsdl" />
+
+    <jaxws:client id="CategoryService"
+                  serviceClass="no.zett.service.facade.CategoryService"
+                  address="http://localhost:9038/zservices/CategoryService?wsdl" />
+
+    <jaxws:client id="SearchItemService"
+                  serviceClass="no.zett.service.facade.SearchItemService"
+                  address="http://localhost:9038/zservices/SearchItemService?wsdl" />
+
+    <jaxws:client id="FraudLogService"
+                  serviceClass="no.zett.service.facade.FraudLogService"
+                  address="http://localhost:9038/zservices/FraudLogService?wsdl" />
+    <jaxws:client id="FraudLogService"
+                  serviceClass="no.zett.service.facade.FraudLogService"
+                  address="http://localhost:9038/zservices/FraudLogService?wsdl" />
+    <jaxws:client id="PrintAdService"
+                  serviceClass="no.zett.service.facade.PrintAdService"
+                  address="http://localhost:9038/zservices/PrintAdService?wsdl" />
+
+
+
+</beans>

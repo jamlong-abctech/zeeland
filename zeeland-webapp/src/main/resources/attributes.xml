@@ -1,0 +1,139 @@
+<Attributes>
+    <!-- Auto/Motor attributes -->
+    <Attribute Category="AUTO" Name="basecolor" Type="STRING" Label="Basisfarge"></Attribute>
+    <Attribute Category="AUTO" Name="doors" Type="INTEGER" Label="Antall dører"></Attribute>
+    <Attribute Category="AUTO" Name="enginevolume" Type="INTEGER" Label="Motorvolum"></Attribute>
+    <Attribute Category="AUTO" Name="cylindercapacity" Type="INTEGER" Label="Slagvolum"></Attribute>
+    <Attribute Category="AUTO" Name="feature" Type="STRING" Label="Nøkkelinformasjon"></Attribute>
+    <Attribute Category="AUTO" Name="fueltype" Type="STRING" Label="Drivstoff"></Attribute>
+    <Attribute Category="AUTO" Name="geartype" Type="STRING" Label="Girtype"></Attribute>
+    <Attribute Category="AUTO" Name="guarantee" Type="STRING" Label="Garanti"></Attribute>
+    <Attribute Category="AUTO" Name="interiorcolor" Type="STRING" Label="Interiørfarge"></Attribute>
+    <Attribute Category="AUTO" Name="make" Type="STRING" Label="Merke"></Attribute>
+    <Attribute Category="AUTO" Name="mileage" Type="INTEGER" Label="Kilometerstand"></Attribute>
+    <Attribute Category="AUTO" Name="model" Type="STRING" Label="Modell"></Attribute>
+    <Attribute Category="AUTO" Name="modelyear" Type="INTEGER" Label="Årsmodell"></Attribute>
+    <Attribute Category="AUTO" Name="operationhours" Type="INTEGER" Label="Driftstimer"></Attribute>
+    <Attribute Category="AUTO" Name="registrationnumber" Type="STRING" Label="Registreringsnr."></Attribute>
+    <Attribute Category="AUTO" Name="reregistrationfee" Type="PRICE_NOK" Label="Omreg. avgift"></Attribute>
+    <Attribute Category="AUTO" Name="reregistrationfeepaid" Type="STRING" Label="Omreg. inklusiv"></Attribute>
+    <Attribute Category="AUTO" Name="firstregistration" Type="STRING" Label="1. gang registrert"></Attribute>
+    <Attribute Category="AUTO" Name="variant" Type="STRING" Label="Variant"></Attribute>
+    <Attribute Category="AUTO" Name="vehicletype" Type="STRING" Label="Kjøretøy"></Attribute>
+    <Attribute Category="AUTO" Name="wheeldrive" Type="STRING" Label="Drivhjul"></Attribute>
+    <Attribute Category="AUTO" Name="frontwheels" Type="STRING" Label="Dekk foran"></Attribute>
+    <Attribute Category="AUTO" Name="rearwheels" Type="STRING" Label="Dekk bak"></Attribute>
+    <Attribute Category="AUTO" Name="yearlyfee" Type="PRICE_NOK" Label="Årsavgift"></Attribute>
+    <Attribute Category="AUTO" Name="yearlyfeepaid" Type="STRING" Label="Årsavgift inklusiv"></Attribute>
+    <Attribute Category="AUTO" Name="height" Type="INTEGER" Label="Høyde (cm)"></Attribute>
+    <Attribute Category="AUTO" Name="chassis" Type="STRING" Label="Ramme"></Attribute>
+    <Attribute Category="AUTO" Name="berth" Type="INTEGER" Label="Soveplasser"></Attribute>
+    <Attribute Category="AUTO" Name="owners" Type="INTEGER" Label="Antall eiere"></Attribute>
+    <Attribute Category="AUTO" Name="stowage" Type="INTEGER" Label="Lasterom"></Attribute>
+    <Attribute Category="AUTO" Name="load" Type="INTEGER" Label="Nyttelast"></Attribute>
+    <Attribute Category="AUTO" Name="cargotype" Type="STRING" Label="Skaptype"></Attribute>
+    <Attribute Category="AUTO" Name="euapprovedto" Type="STRING" Label="Eu godkjent til"></Attribute>
+    <Attribute Category="AUTO" Name="broomurl" Type="STRING" Label="broom.no"></Attribute>
+    <Attribute Category="AUTO" Name="broomplus" Type="STRING" Label="Pluss"></Attribute>
+    <Attribute Category="AUTO" Name="broomminus" Type="STRING" Label="Minus"></Attribute>
+    <Attribute Category="AUTO" Name="broombestbuy" Type="STRING" Label="Beste kjøp"></Attribute>
+    <Attribute Category="AUTO" Name="co2emission" Type="INTEGER" Label="CO&lt;sub&gt;2&lt;/sub&gt; utslipp (g/km)"></Attribute>
+
+    <!-- Property/Eiendom attributes -->
+    <Attribute Category="PROPERTY" Name="apartmentnumber" Type="INTEGER" Label="Leilighetsnr"></Attribute>
+    <Attribute Category="PROPERTY" Name="area" Type="AREA_SIZE" Label="Areal/Bruttoareal"></Attribute>
+    <Attribute Category="PROPERTY" Name="availablefrom" Type="STRING" Label="Ledig fra"></Attribute>
+    <Attribute Category="PROPERTY" Name="basearea" Type="AREA_SIZE" Label="Grunnflate"></Attribute>
+    <Attribute Category="PROPERTY" Name="bathrooms" Type="INTEGER" Label="Antall baderom"></Attribute>
+    <Attribute Category="PROPERTY" Name="bedrooms" Type="INTEGER" Label="Antall soverom"></Attribute>
+    <Attribute Category="PROPERTY" Name="beds" Type="INTEGER" Label="Antall sengeplasser"></Attribute>
+    <Attribute Category="PROPERTY" Name="buildyear" Type="INTEGER" Label="Byggeår"></Attribute>
+    <Attribute Category="PROPERTY" Name="cadastralnumber" Type="INTEGER" Label="Gårdsnr"></Attribute>
+    <Attribute Category="PROPERTY" Name="andelsnumber" Type="INTEGER" Label="Andelsnr"></Attribute>
+    <Attribute Category="PROPERTY" Name="deposit" Type="PRICE_NOK" Label="Depositum"></Attribute>
+    <Attribute Category="PROPERTY" Name="extratoilets" Type="INTEGER" Label="Antall ekstra toaletter"></Attribute>
+    <Attribute Category="PROPERTY" Name="settles" Type="INTEGER" Label="Antall beboere"></Attribute>
+    <Attribute Category="PROPERTY" Name="floor" Type="STRING" Label="Etasje"></Attribute>
+    <Attribute Category="PROPERTY" Name="floors" Type="INTEGER" Label="Antall plan/Etasjer"></Attribute>
+    <Attribute Category="PROPERTY" Name="furniturestatus" Type="STRING" Label="Møblering"></Attribute>
+    <Attribute Category="PROPERTY" Name="grossarea" Type="AREA_SIZE" Label="Bruttoareal BTA"></Attribute>
+    <Attribute Category="PROPERTY" Name="holdingnumber" Type="INTEGER" Label="Bruksnr."></Attribute>
+    <Attribute Category="PROPERTY" Name="housebankfinancing" Type="STRING" Label="Husbankfinansiering tilgjengelig"></Attribute>
+    <Attribute Category="PROPERTY" Name="housenumber" Type="INTEGER" Label="Husnr."></Attribute>
+    <Attribute Category="PROPERTY" Name="featuredhomes" Type="STRING" Label="utvalgteboliger"></Attribute>
+    <Attribute Category="PROPERTY" Name="areafrom" Type="AREA_SIZE" Label="Areal fra"></Attribute>
+    <Attribute Category="PROPERTY" Name="areato" Type="AREA_SIZE" Label="Areal til"></Attribute>
+    <Attribute Category="PROPERTY" Name="pricefrom" Type="PRICE_NOK" Label="Pris fra"></Attribute>
+    <Attribute Category="PROPERTY" Name="priceto" Type="PRICE_NOK" Label="Pris til"></Attribute>
+
+    <!-- Job/Stilling and Voluntary/Frivillig attributes -->
+    <Attribute Category="JOB" Name="promofield" Type="STRING" Label="Promofelt"></Attribute>
+    <Attribute Category="JOB" Name="applicationdue" Type="STRING" Label="Søknadsfrist"></Attribute>
+    <Attribute Category="JOB" Name="applicationemail" Type="STRING" Label="Søknad sendes via e-post"></Attribute>
+    <Attribute Category="JOB" Name="applicationmail" Type="STRING" Label="Søknad sendes via post (adresse)"></Attribute>
+    <Attribute Category="JOB" Name="applicationtag" Type="STRING" Label="Merkes"></Attribute>
+    <Attribute Category="JOB" Name="applicationurl" Type="URL" Label="Søknadskjema"></Attribute>
+    <Attribute Category="JOB" Name="education" Type="STRING" Label="Utdannelse"></Attribute>
+    <Attribute Category="JOB" Name="employer" Type="STRING" Label="Arbeidsgiver"></Attribute>
+    <Attribute Category="JOB" Name="employerdescription" Type="STRING" Label="Firmabeskrivelse, Om firma"></Attribute>
+    <Attribute Category="JOB" Name="employerhomepage" Type="URL" Label="Arbeidsgivers hjemmeside"></Attribute>
+    <Attribute Category="JOB" Name="engagementtype" Type="STRING" Label="Arbeidsforhold"></Attribute>
+    <Attribute Category="JOB" Name="positioncount" Type="INTEGER" Label="Antall stillinger"></Attribute>
+    <Attribute Category="JOB" Name="positiontitle" Type="STRING" Label="Stillingstittel"></Attribute>
+    <Attribute Category="JOB" Name="salary" Type="STRING" Label="Årslønn"></Attribute>
+    <Attribute Category="JOB" Name="starttime" Type="STRING" Label="Tiltredelse"></Attribute>
+    <Attribute Category="JOB" Name="workeara" Type="STRING" Label="Arbeidsområde"></Attribute>
+    <Attribute Category="JOB" Name="workhours" Type="STRING" Label="Arbeidstid"></Attribute>
+    <Attribute Category="JOB" Name="worklocation" Type="STRING" Label="Arbeidssted"></Attribute>
+    <Attribute Category="JOB" Name="workrole" Type="STRING" Label="Stillingsfunksjon"></Attribute>
+    <Attribute Category="JOB" Name="worksector" Type="STRING" Label="Sektor"></Attribute>
+    <Attribute Category="JOB" Name="group" Type="STRING" Label="Aldersgruppe"></Attribute>
+
+    <!-- Boat/Båt attributes -->
+    <Attribute Category="BOAT" Name="length" Type="LENGTH_FEET" Label="Antall fot"></Attribute>
+    <Attribute Category="BOAT" Name="length_feet" Type="INTEGER" Label="Antall fot"></Attribute>
+    <Attribute Category="BOAT" Name="topspeed" Type="STRING" Label="Maks fart"></Attribute>
+    <Attribute Category="BOAT" Name="material" Type="STRING" Label="Materiale"></Attribute>
+    <Attribute Category="BOAT" Name="engineincluded" Type="STRING" Label="Motor inkludert"></Attribute>
+    <Attribute Category="BOAT" Name="enginemake" Type="STRING" Label="Motormerke"></Attribute>
+    <Attribute Category="BOAT" Name="enginetype" Type="STRING" Label="Motortype"></Attribute>
+
+    <!-- Common attributes, can be used on 2 or more categories -->
+    <Attribute Category="COMMON" Name="color" Type="STRING" Label="Farge"></Attribute>
+    <Attribute Category="COMMON" Name="enginehp" Type="INTEGER" Label="Motorstyrke (HK)"></Attribute>
+    <Attribute Category="COMMON" Name="type" Type="STRING" Label="Type"></Attribute>
+    <Attribute Category="COMMON" Name="price" Type="PRICE_NOK" Label="Pris"></Attribute>
+    <Attribute Category="COMMON" Name="pricecomment" Type="STRING" Label="Pris merknad"></Attribute>
+    <Attribute Category="COMMON" Name="saletype" Type="STRING" Label="Selgertype"></Attribute>
+    <Attribute Category="COMMON" Name="text" Type="PREFORMATTED_STRING" Label="Beskrivelse"></Attribute>
+    <Attribute Category="COMMON" Name="length_cm" Type="INTEGER" Label="Lengde (cm)"></Attribute>
+    <Attribute Category="COMMON" Name="condition" Type="STRING" Label="Tilstand"></Attribute>
+    <Attribute Category="COMMON" Name="conditionreport" Type="STRING" Label="Tilstandsrapport"></Attribute>
+    <Attribute Category="COMMON" Name="conditionreporturl" Type="URL" Label="URL til Tilstandsrapport"></Attribute>
+    <Attribute Category="COMMON" Name="weight" Type="INTEGER" Label="Vekt"></Attribute>
+    <Attribute Category="COMMON" Name="ownweight" Type="INTEGER" Label="Egenvekt"></Attribute>
+    <Attribute Category="COMMON" Name="seats" Type="INTEGER" Label="Antall seter"></Attribute>
+    <Attribute Category="COMMON" Name="width" Type="INTEGER" Label="Bredde"></Attribute>
+    <Attribute Category="COMMON" Name="width_cm" Type="INTEGER" Label="Bredde (cm)"></Attribute>
+    <Attribute Category="COMMON" Name="videourl" Type="URL" Label="Videovisning"></Attribute>
+    <Attribute Category="COMMON" Name="whitelabel" Type="STRING" Label="Tilhører"></Attribute>
+
+    <!-- Strange name for this, but it has been chosen long time ago. Changing this name means changing alot of codes -->
+    <Attribute Category="COMMON" Name="ext_ref" Type="URL" Label="Kjøp produktet her"></Attribute>
+    <Attribute Category="COMMON" Name="itemnumber" Type="STRING" Label="Varenr"></Attribute>
+
+    <!-- Own financing url for the company -->
+    <Attribute Category="COMPANY" Name="ownfinancing" Type="URL" Label="Finansiering"></Attribute>
+    <Attribute Category="COMPANY" Name="soldprice" Type="PRICE_NOK" Label="Solgt pris"></Attribute>
+    <Attribute Category="COMPANY" Name="solddate" Type="STRING" Label="Solgt dato"></Attribute>
+    <Attribute Category="COMPANY" Name="buyer" Type="STRING" Label="Kjøper"></Attribute>
+    <Attribute Category="COMPANY" Name="bidtime" Type="STRING" Label="bud dato"></Attribute>
+    <Attribute Category="COMPANY" Name="currentbid" Type="PRICE_NOK" Label="Bud pris"></Attribute>
+    <Attribute Category="COMPANY" Name="showsoldinformation" Type="STRING" Label="Vis solgt status"></Attribute>
+    <Attribute Category="COMPANY" Name="soldstatus" Type="STRING" Label="Solgt status"></Attribute>
+    <Attribute Category="COMPANY" Name="showbidinformation" Type="STRING" Label="Vis bud informasjon"></Attribute>
+
+    <!-- valid value in norwegian: "Tapt" or "Funnet" -->
+    <Attribute Category="LOST_OR_FOUND" Name="lostandfound" Type="STRING" Label="Tapt og funnet"></Attribute>
+    <Attribute Category="LOST_OR_FOUND" Name="lostandfoundtime" Type="STRING" Label="Tidspunkt"></Attribute>
+</Attributes>

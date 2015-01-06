@@ -1,0 +1,83 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:jaxws="http://cxf.apache.org/jaxws"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+
+    <bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping" />
+    <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" />
+
+    <context:annotation-config />
+
+    <context:component-scan base-package="com.abctech.zeeland.**" />
+
+    <bean id="zeelandProperties" class="com.abctech.zeeland.form.util.ZeelandProperties">
+        <property name="apiPropertiesManager" ref="apiPropertiesManager"/>
+    </bean>
+    
+     <!-- test environment not suupport for session scope don't scan this component it will make test fail-->
+    <!-- <context:component-scan base-package="com.abctech.zeeland.security.**" />  -->
+
+    <!-- Hydra login -->
+    <!-- Information which is sent to Hydra for login registration purposes -->
+    <bean id="hydraRegistrationComponent" class="no.api.hydra.client.HydraClientRegistration" init-method="register" destroy-method="unregister" scope="singleton">
+        <property name="directorManager" ref="directorManager"/>
+        <property name="propertiesManager" ref="apiPropertiesManager" />
+        <property name="apiAdminPingURL" value="#{apiPropertiesFacade.globalProperties['hydra.shall.ping.zeeland.on.this.url'].value}" />
+        <property name="hydraShallCallbackHere" value="#{apiPropertiesFacade.globalProperties['hydra.to.zeeland.callback.url'].value}" />
+        <property name="serviceName" value="zeeland" />
+        <property name="clientTitle" value="Zeeland" />
+        <property name="clientDescription" value="Zeeland application" />
+        <property name="acceptedAcls">
+            <list>
+                <value>ROLE_USER</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- Contains common and often used functionality, such as ping-back -->
+    <bean id="hydraClient" class="no.api.hydra.client.HydraClient">
+        <property name="directorManager" ref="directorManager"/>
+        <property name="propertiesManager" ref="apiPropertiesManager"/>
+    </bean>
+
+    <!-- Used for extracting Hydra related properties during startup -->
+    <bean id="apiPropertiesFacade" class="no.api.properties.api.spring.ApiPropertiesFacade">
+        <property name="apiPropertiesManager" ref="apiPropertiesManager"/>
+    </bean>
+
+    <!-- You do not need an iris provider if you shall only implement hydra support -->
+    <bean id="providerManager" class="no.api.director.provider.ProviderManagerImpl">
+        <property name="providers">
+            <list>
+                <ref bean="hydraProvider"/>
+            </list>
+        </property>
+    </bean>
+
+    <!-- Director manager is used in the registration component -->
+    <bean id="directorManager" class="no.api.director.DirectorManagerImpl" autowire="byName">
+        <property name="providerManager" ref="providerManager"/>
+    </bean>
+
+    <!-- Hydra support for login services, used when calling hydra -->
+    <bean id="hydraProvider" class="no.api.hydra.director.HydraProvider">
+        <property name="apiPropertiesManager" ref="apiPropertiesManager"/>
+    </bean>
+
+    <bean id="principalSecurityComponent" class="com.abctech.zeeland.security.PrincipalSecurityComponent">
+        <!-- true = use Hydra, false = do not use Hydra -->
+        <property name="useHydraAuthentication" value="false"/>
+    </bean>
+
+    <!-- test environment not suupport for session scope-->
+    <bean id="tokenObject" class="com.abctech.zeeland.security.Token">
+        <property name="token" value="" />
+    </bean>
+
+    </beans>

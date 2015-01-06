@@ -1,0 +1,10 @@
+#banner {
+    overflow: hidden;
+}
+#bannerLeft {
+    float: left;
+    padding: 14px 0px 0px 20px;
+}
+#bannerRight {
+    float: right;
+}
